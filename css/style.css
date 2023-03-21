@@ -1,0 +1,848 @@
+:root {
+    --white: #FFFFFF;
+    --red: #DB3138;
+    --black: #1E1E1E;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    color: var(--white);
+}
+.mainCalled{
+    box-shadow:  10px 10px 20px 0 var(--red);
+}
+.whiteColor {
+    box-shadow:  5px 5px 20px 0 var(--white);
+}
+.burger {
+	display: none;
+	justify-content: flex-end;
+    padding-right: 10%;
+    padding-top: 10%;
+}
+/* Гамбургер иконка */
+.menu-btn {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index:2;
+	overflow: hidden;
+}
+.menu-btn span {
+	width: 40px;
+	height: 3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--red);
+	transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);  
+}
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg); 
+}
+/* Меню, которое будет появляться */
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+    background-color: rgba(0.1, 0.1, 0.1, 0.5);
+	transform: translateX(-100%);
+	transition: transform 0.5s;
+    
+}
+.menu.active {
+	transform: translateX(0);
+}
+.menu li {
+	list-style-type: none;
+}
+.menu a{
+    text-align: center;
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 140%;
+    color: var(--white);
+    margin-top: 40px;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow:  10px 10px 20px 0 var(--red);
+}
+.contentBlock {
+    padding: 0 calc(19vw - 51px);
+    padding-top: calc(7.8vw + 31px);
+}
+.carHead {
+    text-align: center;
+    text-transform: uppercase;
+    background-image: url(/img/CarHead.png);
+    background-position: center;
+    background-size: cover;
+}
+.head {
+    display: flex;
+    text-transform: none;
+    padding: 0 calc(19vw - 51px);
+}
+.head a {
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 140%;
+    margin: 0 20px;
+    color: var(--white);
+    margin-top: 40px;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    text-transform: none;
+    text-decoration: none;
+}
+.carform.head{
+    font-size: 24px;
+
+}
+h1 {
+    font-family: 'ReformaGroteskBoldC';
+    font-weight: 700;
+    font-size: calc(4.8vw + 56.8px);
+    line-height: 125%;
+    color: var(--red);
+    margin: 0;
+    margin-top: calc(5.7vw + 58.6px);
+}
+.romb {
+    display: flex;
+    justify-content: center;
+    gap: calc(1vw + 2.6px);
+}
+.romb img{
+    width: 10px;
+    height: 10px;
+}
+.title p{
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    font-size: calc(1.3vw + 15.1px);
+    line-height: 120%;
+    text-transform: none;
+    margin: calc(1.3vw + 15.1px) 0;
+    letter-spacing: 0.03em;   
+    margin-bottom: calc(1.9vw + 23px);
+
+}
+.OurServicesButton {
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: calc(0.4vw + 16.5px);
+    letter-spacing: 0.05em;
+    width: calc(3vw + 100px);
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 1%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+}
+.redBtn{
+    background-color: var(--red);
+}
+.infoHead {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.headDown {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 400px;
+    width: 640px;
+    flex-grow: 1;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    border: 1px solid var(--white);
+    padding-bottom: 33px;
+    padding: calc(2vw + 3px) 0;
+}
+.headDownOne {
+    font-size: calc(0.3vw + 13px);
+    line-height: 140%;
+}
+.headDownTwo {
+    font-size: calc(0.4vw + 16.5px);
+    line-height: 140%;
+    color: var(--red);
+    margin: 5px;
+}
+
+/* cup */
+.cup {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: calc(7.8vw + 31px);
+}
+h2 {
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: calc(1vw + 32px);
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0;
+}
+.cupRight {
+    flex-grow: 1;
+    flex-basis: 50%;
+    min-width: 325px;
+    display: flex;
+}
+.cupLeft{
+    flex-grow: 1;
+    flex-basis: 50%;
+    min-width: 325;
+}
+.cupLeft .romb{
+    justify-content: left;
+    margin: calc(2vw + 3px) 0;
+}
+.cupLeft p{
+    margin-top: 20px;
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    font-size: calc(0.4vw + 16.5px);
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    margin-right: calc(4vw + 45px);
+}
+.orderTwo{
+    margin-top: 40px;
+}
+.progress{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--white);
+    padding: 35px 0;
+}
+.progressSlash{
+    display: flex;
+    align-items: end;
+    text-align: center;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: calc(0.4vw + 16.5px);
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    color: var(--red);
+}
+.progressSlash h2{
+    line-height: 100%;
+}
+.progressInfo{
+    text-align: center;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.progress img{
+    width: 37px;
+    margin-bottom: 10px;
+}
+
+/* splide first */
+.splide:not( .is-overflow ) .splide__list {
+    justify-content: center;
+}
+.splide:not( .is-overflow ) .splide__slide:last-child {
+    margin: 0 !important;
+}
+.splide__slide img {
+    width: 100%;
+    height: 100% + 10vw;
+    object-fit: cover;
+}
+.splide.first.contentBlock {
+    padding-top: 0;
+}
+.splide__slide.first div p{
+    margin: 0 1em;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: calc(0.3vw + 13px);
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: var(--red);
+    position: relative;
+    top: -1em;
+    height: 100%;
+    text-align: center;
+} 
+.splide.first .splide__arrow{
+    height: 3vw;
+    width: 3vw;
+    border-radius: 0;
+    background-color: var(--black);
+    border: 2px solid var(--red);
+    transform: rotate(45deg);
+    margin: 0 calc(13vw - 67px); 
+}
+.splide.first .splide__arrow svg{
+    fill: #FFFFFF;
+    width: 1vw;
+    height: 1vw;
+    transform: rotate(135deg);
+}
+.splide.first .splide__arrow--prev{
+    margin-top: -2%;
+}
+.splide.first .splide__arrow--next {
+    transform: rotate(-135deg);
+    margin-top: -2%; 
+}
+.splide.first .splide__pagination__page {
+    display: none;
+}
+
+
+/* blueCar */
+.blueCar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(7.4vw - 7.7px);
+    height: 100%;
+}
+h3 {
+    margin: 0;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: calc(0.77vw + 17px);
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.blueCarLeft{
+    flex-basis: 300px;
+    flex-grow: 1;
+    min-width: 300px;
+}
+.blueCarRight{
+    flex-basis: 300px;
+    flex-grow: 1;
+    min-width: 300px;
+    margin: auto 0; 
+}
+.blueCar .romb {
+    margin: calc(1.3vw + 15.1px) 0;
+}
+.blueCarLeftChild span{
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    font-size: calc(0.4vw + 16.5px);
+    line-height: 120%;
+}
+.blueCarLeftSmallChild{
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(1.3vw + 5px);
+    margin-top: 0; 
+}
+.blueCarLeftSmallChild img{
+    width: calc(2.3vw + 26.5px);
+    margin-right: calc(1.6vw - 1px);
+}
+.splide.second .splide__arrow{
+    margin-top: 47%;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 0;
+    background-color: var(--black);
+    border: 2px solid var(--red);
+    transform: rotate(45deg);
+}
+.splide.second .splide__arrow svg{
+    fill: #FFFFFF;
+    width: 1vw;
+    height: 1vw;
+    transform: rotate(135deg);
+}
+.splide.second .splide__arrow--next {
+    transform: rotate(-135deg);
+}
+.splide.second .splide__pagination__page {
+    display: none;
+}
+.splide.second img{
+    width: 110%;
+}
+.splide.second div p{
+    font-family: 'ReformaGroteskDemiC';
+    font-size: calc(0.3vw + 10px);
+    line-height: 140%;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0 5em;
+    padding-top: 2em;
+    margin: 0;
+    text-align: center;
+}
+
+/* наши услуги */
+.ourServices {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    padding-bottom: calc(7.8vw - 19.4px);
+    padding-top: calc(7.8vw + 31px);
+}
+.ourServices h2{
+    margin-bottom: calc(1.3vw + 15.1px);
+}
+.servBtn{
+    display: flex;
+    justify-content: center;
+    gap: calc(4.5vw + 13px);
+    margin-top: calc(1.9vw + 22.7px);
+}
+.servBtn .OurServicesButton{
+    margin: 0;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: calc(0.8vw + 17px);
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.none{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+.pasting{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: calc(3.9vw + 5.4px);
+}
+.pastingHeadPart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+.pastingPart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--white);
+    width: 300px;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.pastingPart .OurServicesButton{
+    font-size: 18px;
+    padding: 10px;
+    width: 80px;
+    text-transform: uppercase;
+}
+.pastingPart img{
+    width: 70px;
+    height: 70px;
+}
+.pastingPart p{
+    margin: 20px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.pastingPart span{
+    padding: 0 40px;
+    padding-bottom: 25px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.detailing{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: calc(3.9vw + 5.4px);
+}
+.detailingHeadPart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+.detailingPart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--white);
+    width: 300px;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.detailingPart .OurServicesButton{
+    font-size: 18px;
+    padding: 10px;
+    width: 80px;
+    text-transform: uppercase;
+}
+.detailingPart img{
+    width: 70px;
+    height: 70px;
+}
+.detailingPart p{
+    margin: 20px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.detailingPart span{
+    padding: 0 40px;
+    padding-bottom: 25px;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* splideThird */
+.yellowCar{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    gap: calc(7.4vw - 7.7px);
+    height: 100%;
+}
+.yellowCarLeft{
+    flex-basis: 300px;
+    flex-grow: 1;
+    min-width: 300px;
+}
+.yellowCarRight{
+    flex-basis: 300px;
+    flex-grow: 1;
+    min-width: 300px;
+    margin: auto 0; 
+}
+.yellowCar .romb {
+    margin: calc(1.3vw + 15.1px) 0;
+}
+.yellowCarLeftChild span{
+    font-family: 'ReformaGroteskMediumC';
+    font-weight: 500;
+    font-size: calc(0.4vw + 16.5px);
+    line-height: 120%;
+}
+.yellowCarLeftSmallChild{
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(1.3vw + 5px);
+    margin-top: 0;  
+}
+.yellowCarLeftSmallChild img{
+    width: calc(2.3vw + 26.5px);
+    margin-right: calc(1.6vw - 1px);
+}
+.splide.third .splide__arrow{
+    margin-top: 41%;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 0;
+    background-color: var(--black);
+    border: 2px solid var(--red);
+    transform: rotate(45deg);
+}
+.splide.third .splide__arrow svg{
+    fill: #FFFFFF;
+    width: 1vw;
+    height: 1vw;
+    transform: rotate(135deg);
+}
+.splide.third .splide__arrow--next {
+    transform: rotate(-135deg);
+}
+.splide.third .splide__pagination__page {
+    display: none;
+}
+.splide.third img{
+    width: 100%;
+}
+.splide.third div p{
+    font-family: 'ReformaGroteskDemiC';
+    font-size: calc(0.3vw + 10px);
+    line-height: 140%;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0 5em;
+    padding-top: 2em;
+    margin: 0;
+    text-align: center;
+}
+
+/* image */
+.images{
+    margin: 0;
+    padding: 0;
+    padding-top: calc(7.8vw + 31px);
+    align-items: center;
+    text-align: center;
+}
+.images .romb {
+    margin-top: calc(1.3vw + 15.1px);
+    margin-bottom: calc(1.9vw + 32px);
+}
+.moreImages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.moreImages img{
+    width: calc(12.4vw + 81.4px);
+    height: calc(10.9vw + 71.2px);
+}
+
+/* form */
+.carForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding-top: calc(7.8vw + 31px);
+
+}
+.carForm .romb {
+    margin-top: calc(1.3vw + 15.1px);
+    margin-bottom: calc(1.9vw + 32px);
+}
+
+.formHead {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding-bottom: 24px;
+}
+.formHead input {
+    width: 306px;
+    height: 47px;
+    background-color: var(--black);
+    border: 1px solid var(--white);
+    cursor: pointer;
+    color: var(--white);
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+input:focus{
+    border: 4px solid var(--red);
+    box-shadow:  10px 10px 20px 0 var(--red);
+}
+textarea.userTextarea:focus{
+    border: 4px solid var(--red);
+    box-shadow:  10px 10px 20px 0 var(--red);
+}
+.formBody {
+    display: flex;
+    justify-content: space-between;
+}
+.formBody button{
+    background-color: var(--black);
+    border: 1px solid var(--white);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    
+}
+.formBody textarea{
+    background-color: var(--black);
+    cursor: pointer;
+    width: 526px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+}
+.formBody .cmm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+.cmm img {
+    margin-top: 15%;
+    margin-right: 25%;
+}
+.formFood {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.formFood .redBtn {
+    cursor: pointer;
+    padding: 15px;
+}
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.location img{
+    width: 16px;
+    margin: -1px;
+    margin-right: 13px;
+}
+.formSpan {
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.connection {
+    display: flex;
+    gap: 32px;
+}
+
+.sendForm {
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: calc(0.4vw + 16.5px);
+    letter-spacing: 0.05em;
+    width: calc(3vw + 100px);
+    padding: 1%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;  
+}
+.carForm hr{
+    margin-top: calc(5.2vw + 6px);
+    color: #898989;
+    width: 100%;
+}
+.last {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(10.2vw - 8px);
+    padding: calc(1.3vw + 5.1px) 0;
+}
+.last span{
+    margin: 0;
+    padding: 0;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+.last a{
+    margin: 0;
+    padding: 0;
+    font-family: 'ReformaGroteskDemiC';
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.last .head {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+}
+@media (max-width: 800px) {
+    .carform {
+        width: 308;
+    }
+    .formHead {
+        flex-wrap: wrap;
+    }
+    .formBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    .formBody textarea {
+        width: 306px;
+    }
+    .formBody .cmm {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    .formFood {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .location {
+        align-items: center;
+    }
+    .last {
+        gap: calc(3.2vw - 8px);
+    }
+    .head {
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
+}
