@@ -97,7 +97,7 @@ body {
 .carHead {
     text-align: center;
     text-transform: uppercase;
-    background-image: url(/img/CarHead.png);
+    background-image: url(../headCar.jpg);
     background-position: center;
     background-size: cover;
     padding-bottom: 213px;
