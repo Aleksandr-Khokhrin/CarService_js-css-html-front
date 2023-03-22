@@ -25,7 +25,7 @@ body {
 .menu-btn {
 	width: 30px;
 	height: 30px;
-	position: relative;
+	position: fixed;
 	z-index:2;
 	overflow: hidden;
 }
@@ -75,12 +75,17 @@ body {
 }
 .menu li {
 	list-style-type: none;
+	 display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    margin-right: 15%;
 }
 .menu a{
     text-align: center;
     font-family: 'ReformaGroteskMediumC';
     font-weight: 500;
-    font-size: 50px;
+    font-size: calc(5.6vw + 3px);
     line-height: 140%;
     color: var(--white);
     margin-top: 40px;
