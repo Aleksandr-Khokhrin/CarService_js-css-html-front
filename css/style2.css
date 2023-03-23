@@ -458,12 +458,21 @@ TABLE{
     text-transform: uppercase;
 }
 
+textarea:active, textarea:hover, textarea:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+input:active, input:hover, input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
 input:focus{
-    border: 3px solid var(--red);
+    border: 1px solid var(--red);
     box-shadow:  10px 10px 20px 0 var(--red);
 }
 textarea.userTextarea:focus{
-    border: 3px solid var(--red);
+    border: 1px solid var(--red);
     box-shadow:  10px 10px 20px 0 var(--red);
 }
 .formBody {
