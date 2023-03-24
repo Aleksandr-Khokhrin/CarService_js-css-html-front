@@ -20,6 +20,17 @@ for (let anchor of anchors) {
     })
   })
 }
+const serv = document.querySelectorAll('a[href*="#serv"]')
+for (let anchor of serv) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    const blockID = anchor.getAttribute('href').substr(1)
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
 
 
 //карусель1
