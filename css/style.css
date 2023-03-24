@@ -93,7 +93,7 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow:  10px 10px 20px 0 var(--red);
+    text-shadow: 0 0 10px red,0 0 20px red,0 0 30px red,0 0 40px red;
 }
 .contentBlock {
     padding: 0 calc(19vw - 51px);
