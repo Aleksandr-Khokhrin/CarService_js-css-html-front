@@ -105,7 +105,7 @@ body {
     background-image: url(../headCar.jpg);
     background-position: center;
     background-size: cover;
-    padding-bottom: 213px;
+    padding-bottom: calc(9.9vw + 22.5px);
 }
 .head {
     display: flex;
