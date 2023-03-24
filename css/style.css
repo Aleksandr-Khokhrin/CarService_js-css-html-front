@@ -860,8 +860,12 @@ textarea.userTextarea:focus{
         display: flex;
         flex-direction: column;
     }
-    .moreImages img{
-        width:  100%;
-        height: 100%;
+        .formHead input {
+        margin: 0 5%;
+    }
+}
+@media (max-width: 500px) {
+    .formHead input {
+        margin: 0;
     }
 }
