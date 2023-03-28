@@ -87,11 +87,11 @@ body {
     text-align: center;
     font-family: 'ReformaGroteskMediumC';
     font-weight: 500;
-    font-size: calc(5.6vw + 3px);
+    font-size: calc(5.6vw + 13px);
     line-height: 140%;
     color: var(--white);
     margin-top: 40px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.1em;
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
