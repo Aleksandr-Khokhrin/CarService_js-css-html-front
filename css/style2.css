@@ -71,6 +71,13 @@ body {
         z-index: 1;
 
 }
+.menu img {
+    width: 10vw;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border-radius: 15%;
+}
 .menu.active {
 	transform: translateX(0);
 }
