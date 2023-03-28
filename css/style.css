@@ -68,6 +68,8 @@ body {
 	background-color: rgba(0.1, 0.1, 0.1, 0.5);
 	transform: translateX(-100%);
 	transition: transform 0.5s;
+	z-index: 1;
+
     
 }
 .menu.active {
