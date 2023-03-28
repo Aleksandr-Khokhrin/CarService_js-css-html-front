@@ -328,7 +328,7 @@ h2 {
     background-color: var(--black);
     border: 2px solid var(--red);
     transform: rotate(45deg);
-    margin: 0 calc(13vw - 67px); 
+    margin: 0 calc(13vw - 57px); 
 }
 .splide.first .splide__arrow svg{
     fill: #FFFFFF;
